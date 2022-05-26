@@ -1,8 +1,23 @@
-body {
-  background-color: red;
-
+html, body {
+  background-color: #010C1D;
 }
 
-h1 {
-  background-color: red;
+.nav {
+  margin-top: 1em;
+  margin-left: 10px;
 }
+
+.rightnav {
+  margin-top: .4em;
+  margin-left: 2%;
+}
+
+.content {
+  color: #909090;
+  margin-left: 10px;
+}
+
+/* .container {
+  margin-left: auto;
+  margin-right: auto;
+} */
