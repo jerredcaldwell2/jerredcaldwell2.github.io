@@ -14,6 +14,7 @@
 
 .navbar {
   width: 85%;
+  margin-top: 30px;
   margin: auto;
   padding: 20px 0;
   display: flex;
@@ -24,7 +25,6 @@
 .logo {
   width: 275px;
   cursor: pointer;
-
 }
 
 #navtxt {
@@ -76,29 +76,3 @@
   font-weight: 100;
   line-height: 25px;
 }
-
-
-
-/* html, body {
-  background-color: #010C1D;
-}
-
-.nav {
-  margin-top: 1em;
-  margin-left: 10px;
-}
-
-.rightnav {
-  margin-top: .4em;
-  margin-left: 2%;
-}
-
-.content {
-  color: #909090;
-  margin-left: 10px;
-} */
-
-/* .container {
-  margin-left: auto;
-  margin-right: auto;
-} */
