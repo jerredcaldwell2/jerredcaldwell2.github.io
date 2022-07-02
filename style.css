@@ -103,3 +103,15 @@ section#contact {
   background: url(contact.jpg) no-repeat center center/
   cover;
 }
+
+#l1 {
+  margin-top: 10%;
+  margin-bottom: 20%;
+  color: black;
+}
+
+#l2 {
+  /* margin-top: 10%; */
+  margin-bottom: 10%;
+  color: black;
+}
