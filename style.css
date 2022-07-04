@@ -152,6 +152,9 @@ section#contact {
   section#projects {
     font-size: 12px;
   }
+  div.projectscontent {
+    margin-bottom: 5%
+  }
 }
 
 /* If the screen size is 600px or less, set the font-size of <div> to 30px */
