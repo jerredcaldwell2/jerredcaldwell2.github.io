@@ -137,7 +137,7 @@ section#contact {
 
 @media only screen and (min-width: 601px) {
   section#about {
-    font-size: 13px;
+    font-size: 14px;
   }
 }
 
@@ -150,7 +150,7 @@ section#contact {
 
 @media only screen and (min-width: 601px) {
   section#projects {
-    font-size: 13px;
+    font-size: 12px;
   }
 }
 
