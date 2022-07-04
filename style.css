@@ -115,3 +115,61 @@ section#contact {
   margin-bottom: 20%;
   color: white;
 }
+
+@media only screen and (min-width: 601px) {
+  section#home {
+    font-size: 30px;
+  }
+  div.homecontent {
+    margin-top: 35%
+  }
+}
+
+/* If the screen size is 600px or less, set the font-size of <div> to 30px */
+@media only screen and (max-width: 600px) {
+  section#home {
+    font-size: 15px;
+  }
+  div.homecontent {
+    margin-top: 50%
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  section#about {
+    font-size: 15px;
+  }
+}
+
+/* If the screen size is 600px or less, set the font-size of <div> to 30px */
+@media only screen and (max-width: 600px) {
+  section#about {
+    font-size: 10px;
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  section#projects {
+    font-size: 18px;
+  }
+}
+
+/* If the screen size is 600px or less, set the font-size of <div> to 30px */
+@media only screen and (max-width: 600px) {
+  section#projects {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  section#contact {
+    font-size: 30px;
+  }
+}
+
+/* If the screen size is 600px or less, set the font-size of <div> to 30px */
+@media only screen and (max-width: 600px) {
+  section#contact {
+    font-size: 15px;
+  }
+}
