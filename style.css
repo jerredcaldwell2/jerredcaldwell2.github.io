@@ -176,3 +176,7 @@ section#contact {
     font-size: 15px;
   }
 }
+
+h2, h3 {
+  text-shadow: 3px 3px 4px #000000;
+}
