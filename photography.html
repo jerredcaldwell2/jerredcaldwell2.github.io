@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JC - Photography</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="master.css" />
+  </head>
+
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-inverse nav">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <!-- Mobile navbar content -->
+        <div class="collapse navbar-collapse navbar-dropdown" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="career.html">Career</a></li>
+            <li class="active"><a href="hobbies.html">Hobbies</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="login.html">Login</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Content -->
+  <div class="container-fluid content floating-box">
+    <img class="logo_inv_2" src="assets/jc_logo_inv.png" alt="Inv Logo">
+    <h4 class="centered-text wave-text">"Photography is the only language that <br> can be understood anywhere in the world." - Bruno Barbey</h4>
+      
+    <div style="padding-bottom: 10px;">
+        <ul class="nav-links centered-text">
+          <li><a href="hunting.html">Hunting</a></li>
+          <li><a href="fishing.html">Fishing</a></li>
+          <li><a href="automotive.html">Automotive</a></li>
+          <li><a href="electronics.html">Electronics</a></li>
+          <li><a style="color: white;" href="photography.html">Photography</a></li>
+          <li><a href="volunteer.html">Volunteer</a></li>
+        </ul>
+      </div>
+
+<br>
+      <p class="centered-text">I like to shoot pics. :P</p>
+<br>
+
+      <div class="image-container">
+        <img class="tiltImage limg" src="assets/photography/majestic.jpg" alt="hunt1">
+        <img class="tiltImage rimg" src="assets/photography/ktm.jpg" alt="hunt2">        
+      </div>
+      <div class="image-container">
+        <img class="tiltImage limg" src="assets/photography/tori.jpg" alt="hunt1">
+        <img class="tiltImage rimg" src="assets/photography/indy.jpg" alt="hunt2">        
+      </div>
+      <div class="image-container">
+        <img class="tiltImage limg" src="assets/photography/gunner.jpg" alt="hunt1">
+        <img class="tiltImage rimg" src="assets/photography/egret.jpg" alt="hunt2">        
+      </div>
+      <div class="image-container">
+        <img class="tiltImage limg" src="assets/photography/drone.jpg" alt="hunt3">
+        <img class="tiltImage rimg" src="assets/photography/darksky.jpg" alt="hunt4">        
+      </div>
+      <br>
+      <p class="centered-text"><a href="photography.html">Top of Page</a></p>
+    
+</div>
+
+<script>
+  window.onload = function() {
+    var images = document.getElementsByClassName('tiltImage');
+
+    for (var i = 0; i < images.length; i++) {
+        images[i].addEventListener('mousemove', function(e) {
+            const { offsetWidth: width, offsetHeight: height } = this;
+            const { offsetX: mouseX, offsetY: mouseY } = e;
+            const xTilt = (mouseX / width - 0.5) * 10;
+            const yTilt = (mouseY / height - 0.5) * 10;
+
+            this.style.transform = `rotateX(${yTilt}deg) rotateY(${xTilt}deg)`;
+        });
+
+        images[i].addEventListener('mouseleave', function(e) {
+            this.style.transform = '';
+        });
+    }
+  }
+</script>
+
+<footer class="footer">
+  <div class="container">
+    <p></p>
+    <p>&copy; 2023 Jerred Caldwell</p>
+  </div>
+</footer>
+
+</body>
+</html>

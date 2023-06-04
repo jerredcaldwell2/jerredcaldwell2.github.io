@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>JC</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="master.css" />
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-inverse nav">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <!-- mobile navbar content -->
+      <div class="collapse navbar-collapse navbar-dropdown" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="career.html">Career</a></li>
+          <li><a href="hobbies.html">Hobbies</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li class="active"><a href="login.html">Login</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<div class="container-fluid content floating-box">
+  <img class="logo_inv_1" src="assets/jc_logo_inv.png" alt="Inv Logo">
+    <h1 id="heading-text" class="centered-text"></h1>
+    <p id="p1-text" class="centered-text"></p>
+    <p id="p2-text" class="centered-text"></p>
+    <div></div>
+</div>
+
+<script type="text/javascript">
+  var i=0, text;
+  var headingText = "Access Denied!";
+  var p1Text = "User:";
+  var p2Text = "Password:";
+ 
+  function typing() {
+    if(i<headingText.length){
+      document.getElementById("heading-text").innerHTML += headingText.charAt(i);
+      i++;
+      setTimeout(typing,80);
+    } else if (i<headingText.length + p1Text.length) {
+      document.getElementById("p1-text").innerHTML += p1Text.charAt(i - headingText.length);
+      i++;
+      setTimeout(typing,80);
+    } else if (i<headingText.length + p1Text.length + p2Text.length) {
+      document.getElementById("p2-text").innerHTML += p2Text.charAt(i - headingText.length - p1Text.length);
+      i++;
+      setTimeout(typing,80);
+    }
+  }
+  typing();
+</script>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <p></p>
+    <p>&copy; 2023 Jerred Caldwell</p>
+  </div>
+</footer>
+
+</body>
+</html>
