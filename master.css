@@ -6,7 +6,7 @@ body {
     padding: 0;
     color: 39ff14;
     background-color: #090909;
-    background-image: url('../assets/cpu.webp');
+    background-image: url('assets/cpu.webp');
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat; 
