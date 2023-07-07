@@ -12,7 +12,7 @@
 </head>
 
 <body>
-  
+
   <nav class="navbar navbar-inverse nav">
     <div class="container-fluid">
       <div class="navbar-header">
@@ -38,7 +38,7 @@
   <div class="container-fluid content floating-box">
     <img class="logo_inv_2" src="assets/jc_logo_inv.png" alt="Inv Logo">
     <h4 class="centered-text wave-text">"Now then, get your quiver and bow and go out to the open country<br>to hunt some wild game for me." - Genesis 27:3</h4>
-  
+
     <div style="padding-bottom: 25px;">
       <ul class="nav-links centered-text">
         <li><a style="color: white;" href="/hunting">Hunting</a></li>
@@ -49,42 +49,46 @@
         <li><a href="/volunteer">Volunteer</a></li>
       </ul>
     </div>
-  
+
     <p class="centered-text">Whitetail deer, ducks, and predators are my specialty.</p>
     <p class="centered-text">Firearms and archery mastery enthusiast.</p>
     <br>
-  
+
     <div class="image-container">
       <img class="tiltImage limg" src="assets/hunting/land1.jpg" alt="hunt1">
-      <img class="tiltImage rimg" src="assets/hunting/land2.jpg" alt="hunt2">        
+      <img class="tiltImage rimg" src="assets/hunting/land2.jpg" alt="hunt2">
     </div>
     <div class="image-container">
       <img class="tiltImage limg" src="assets/hunting/field.jpg" alt="hunt1">
-      <img class="tiltImage rimg" src="assets/hunting/indy.jpg" alt="hunt2">        
+      <img class="tiltImage rimg" src="assets/hunting/indy.jpg" alt="hunt2">
     </div>
     <div class="image-container">
       <img class="tiltImage limg" src="assets/hunting/doves.jpg" alt="hunt3">
-      <img class="tiltImage rimg" src="assets/hunting/ducks.jpg" alt="hunt4">        
+      <img class="tiltImage rimg" src="assets/hunting/ducks.jpg" alt="hunt4">
     </div>
     <br>
     <p class="centered-text"><a href="/hunting">Top of Page</a></p>
-  
-  </div>
+
+    <br>
+    <br>
+    <br>
+    <p class="centered-text">&copy; 2023 Jerred Caldwell</p>
+    </div>
 
   <script>
     window.onload = function() {
       var images = document.getElementsByClassName('tiltImage');
-  
+
       for (var i = 0; i < images.length; i++) {
           images[i].addEventListener('mousemove', function(e) {
               const { offsetWidth: width, offsetHeight: height } = this;
               const { offsetX: mouseX, offsetY: mouseY } = e;
               const xTilt = (mouseX / width - 0.5) * 10;
               const yTilt = (mouseY / height - 0.5) * 10;
-  
+
               this.style.transform = `rotateX(${yTilt}deg) rotateY(${xTilt}deg)`;
           });
-  
+
           images[i].addEventListener('mouseleave', function(e) {
               this.style.transform = '';
           });
@@ -92,11 +96,16 @@
     }
   </script>
 
-  <footer class="footer">
-    <div class="container">
-      <p></p>
-      <p>&copy; 2023 Jerred Caldwell</p>
-    </div>
-  </footer>
+
+
+<!-- Footer -->
+<!--
+<footer class="footer">
+  <div class="container">
+    <p></p>
+    <p>&copy; 2023 Jerred Caldwell</p>
+  </div>
+</footer>
+-->
 </body>
 </html>
