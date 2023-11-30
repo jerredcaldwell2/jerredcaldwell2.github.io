@@ -377,7 +377,6 @@ h4.centered-text {
 }
 
 #tiltImage {
-<<<<<<< Updated upstream
     transition: transform 0.3s;
 }
 
@@ -392,7 +391,7 @@ h4.centered-text {
     text-align: center;
 }
 =======
-  transition: transform 0.3s;
+  transition: transform 0.3s; {
 }
 
 @media only screen and (max-width: 767px) {
@@ -401,4 +400,3 @@ h4.centered-text {
       text-decoration: underline; /* Underline the text */
   }
 }
->>>>>>> Stashed changes
