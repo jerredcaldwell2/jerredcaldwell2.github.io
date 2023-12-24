@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JC</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="master.css" />
+  </head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-inverse nav">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <!-- Mobile navbar content -->
+      <div class="collapse navbar-collapse navbar-dropdown" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="/index">Home</a></li>
+          <li><a href="/career">Career</a></li>
+          <li><a href="/hobbies">Hobbies</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/login">Login</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Content -->
+  <div class="container-fluid floating-box">
+  <div class="content">
+    <img class="logo_inv_2" src="assets/jc_logo_inv.png" alt="Inv Logo">
+    <h4 class="centered-text wave-text">"I can do all things through him who strengthens me. - Philippians 4:13</h4>
+
+    <br>
+    <p class="centered-text">Mom,
+      <br>Merry Christmas!
+      <br>As Christmas fills our hearts with joy and warmth,
+      <br>I want to take a moment to wish you a Merry Christmas and a New Year filled with health, happiness, and unforgettable memories.
+      <br>Your love and presence in my life are the greatest gifts of all, and I cherish every moment we spend together.
+      <br>
+      <br>May this holiday season bring us closer and wrap us in the love and laughter that define our family.
+      <br>Here's to you and making new memories and treasuring the old ones.
+    <br>
+
+    <div class="image-container">
+      <img class="tiltImage limg" src="assets/christmas/mom.jpg" alt="mom">
+
+    </div>
+
+    <br>
+    <p class="centered-text"><a href="/electronics">Top of Page</a></p>
+
+    <br>
+    <br>
+    <br>
+    <p class="centered-text">&copy; 2023 Jerred Caldwell</p>
+    </div>
+</div>
+<script>
+  window.onload = function() {
+    var images = document.getElementsByClassName('tiltImage');
+
+    for (var i = 0; i < images.length; i++) {
+        images[i].addEventListener('mousemove', function(e) {
+            const { offsetWidth: width, offsetHeight: height } = this;
+            const { offsetX: mouseX, offsetY: mouseY } = e;
+            const xTilt = (mouseX / width - 0.5) * 10;
+            const yTilt = (mouseY / height - 0.5) * 10;
+
+            this.style.transform = `rotateX(${yTilt}deg) rotateY(${xTilt}deg)`;
+        });
+
+        images[i].addEventListener('mouseleave', function(e) {
+            this.style.transform = '';
+        });
+    }
+  }
+</script>
+
+
+
+<!-- Footer -->
+<!--
+<footer class="footer">
+  <div class="container">
+    <p></p>
+    <p>&copy; 2023 Jerred Caldwell</p>
+  </div>
+</footer>
+-->
+
+</body>
+</html>
