@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>JC</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="master.css" />
+  <!-- <link rel="stylesheet" href="calc_style.css"> -->
+  <script src="calc_script.js"></script>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-inverse nav">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <!-- mobile navbar content -->
+      <div class="collapse navbar-collapse navbar-dropdown" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="/index">Home</a></li>
+          <li class="active"><a href="/calculator">Calculator</a></li>
+          <li><a href="/career">Career</a></li>
+          <li><a href="/hobbies">Hobbies</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/login">Login</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Content -->
+  <div class="container-fluid floating-box">
+    <div class="container calc_container">
+        <h1 class="bright-text">Jerred's Calculator</h1>
+        <div class="calc_input-section">
+            <input type="text" id="input1" placeholder="Enter value" class="bright-text">
+            <select id="inputUnit1" class="select_calc bright-text">
+                <option value="mm">mm</option>
+                <option value="cm">cm</option>
+                <option value="m">m</option>
+                <option value="km">km</option>
+                <option value="in">in</option>
+                <option value="ft">ft</option>
+                <option value="yd">yd</option>
+                <option value="mi">mi</option>
+            </select>
+        </div>
+        <div class="calc_input-section">
+            <select id="operation" class="bright-text">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+            </select>
+        </div>
+        <div class="calc_input-section">
+            <input type="text" id="input2" placeholder="Enter value" class="bright-text">
+            <select id="inputUnit2" class="select_calc bright-text">
+                <option value="mm">mm</option>
+                <option value="cm">cm</option>
+                <option value="m">m</option>
+                <option value="km">km</option>
+                <option value="in">in</option>
+                <option value="ft">ft</option>
+                <option value="yd">yd</option>
+                <option value="mi">mi</option>
+            </select>
+        </div>
+        <div class="calc_input-section">
+            <select id="outputUnit" class="select_calc bright-text">
+                <option value="mm">mm</option>
+                <option value="cm">cm</option>
+                <option value="m">m</option>
+                <option value="km">km</option>
+                <option value="in">in</option>
+                <option value="ft">ft</option>
+                <option value="yd">yd</option>
+                <option value="mi">mi</option>
+            </select>
+        </div>
+        <div class="calc_input-section">
+            <button onclick="convertAndCalculate()" class="calc_button">Calculate</button>
+        </div>
+        <ul id="history" class="bright-text"></ul>
+    </div>
+</div>
+  <!-- Footer -->
+  <!--
+  <footer class="footer">
+    <div class="container">
+      <p></p>
+      <p>&copy; 2023 Jerred Caldwell</p>
+    </div>
+  </footer>
+-->
+</body>
+</html>

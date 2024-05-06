@@ -400,3 +400,39 @@ h4.centered-text {
       text-decoration: underline; /* Underline the text */
   }
 }
+
+
+.calc_container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    color: #000; /* White text color */
+    background-color: #333; /* Dark background color */
+}
+
+.calc_input-section {
+    margin-bottom: 10px;
+    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
+    padding: 10px; /* Add padding for better visibility */
+    border-radius: 4px; /* Add border radius for rounded corners */
+}
+
+/* Ensure dropdown options text color is black */
+select_calc {
+    color: #000; /* Black text color */
+}
+
+.calc_button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.calc_button:hover {
+    background-color: #0056b3;
+}
