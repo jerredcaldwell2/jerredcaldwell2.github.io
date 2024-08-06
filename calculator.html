@@ -119,11 +119,11 @@
                 if (currentCharIndex < currentText.length) {
                     document.getElementById(`p${currentTextIndex + 1}-text`).innerHTML += currentText.charAt(currentCharIndex);
                     currentCharIndex++;
-                    setTimeout(typing, 80);
+                    setTimeout(typing, 60);
                 } else {
                     currentTextIndex++;
                     currentCharIndex = 0;
-                    setTimeout(typing, 80);
+                    setTimeout(typing, 60);
                 }
             }
         }
