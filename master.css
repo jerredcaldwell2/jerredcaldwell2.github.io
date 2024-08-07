@@ -1,20 +1,28 @@
-/* Set the height of the body to 100% */
 body {
     height: 100%;
     margin: 0;
     padding: 0;
     color: #39ff14;
-    background-color: #090909;
-    background-image: url('assets/cpu.webp');
-    background-size: cover;
-    background-position: top;
-    background-repeat: no-repeat;
+    background: transparent; /* Transparent background for the body */
+    overflow: hidden; /* Ensure content does not overflow */
+    position: relative; /* Ensure z-index is effective */
 }
 
 @media screen and (max-width: 600px) {
     body {
         background-repeat: repeat;
     }
+}
+
+/* Matrix tunnel canvas */
+#matrixTunnel {
+    position: fixed; /* Ensure the canvas stays in place */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensure the canvas is behind everything */
+    background-color: #090909; /* Ensure canvas background is transparent */
 }
 
 /* Set the height of the content to 100% minus the height of the navbar */
@@ -24,11 +32,15 @@ body {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
     padding-top: 30px;
     padding-bottom: 30px;
+    position: relative;
+    z-index: 3; /* Ensure content is above the canvas */
 }
 
 header {
     height: 50px; /* Set the height of the header */
     background-color: #ccc;
+    position: relative;
+    z-index: 3; /* Ensure header is above the canvas */
 }
 
 main {
@@ -36,7 +48,8 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: calc(100% - 50px); /* Subtract the height of the header */
+    position: relative;
+    z-index: 3; /* Ensure main content is above the canvas */
 }
 
 .navbar {
@@ -49,6 +62,7 @@ main {
     background-color: #333;
     color: #fff;
     text-align: center;
+    z-index: 4; /* Ensure navbar is on top of everything */
 }
 
 /* Set the navbar to a dark color */
@@ -85,10 +99,15 @@ main {
     color: #39ff14;
     font-family: 'Orbitron', sans-serif;
     box-shadow: 0 0 20px #0ff0ff;
-    z-index: -2; /* increased z-index to ensure box is above other elements */
+    z-index: 3; /* Ensure floating-box is above the canvas */
     overflow-y: auto;
     border-radius: 10px;
 }
+
+
+
+
+
 
 
 
