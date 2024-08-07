@@ -107,7 +107,7 @@
         var i = 0;
         var textArray = [
             "This is an advanced length and distance calculator/convertor.",
-            "It can do what you want it to.",
+            "It can do what you want.",
             "Fractions, Decimals, Standard, Metric, Back and Forth.",
             "Remember, with great power comes great responsibility."
         ];
@@ -120,11 +120,11 @@
                 if (currentCharIndex < currentText.length) {
                     document.getElementById(`p${currentTextIndex + 1}-text`).innerHTML += currentText.charAt(currentCharIndex);
                     currentCharIndex++;
-                    setTimeout(typing, 60);
+                    setTimeout(typing, 32);
                 } else {
                     currentTextIndex++;
                     currentCharIndex = 0;
-                    setTimeout(typing, 60);
+                    setTimeout(typing, 32);
                 }
             }
         }
