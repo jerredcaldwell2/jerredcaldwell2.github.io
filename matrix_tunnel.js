@@ -47,15 +47,17 @@ function initParticles() {
 }
 
 function animate() {
-    ctx.clearRect(0, 0, width, height); // Clear the canvas
+        // Create the trail effect by using a transparent black fill
+        ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
+        ctx.fillRect(0, 0, width, height);
 
-    particles.forEach(p => {
-        p.update();
-        p.draw();
-    });
+        particles.forEach(p => {
+            p.update();
+            p.draw();
+        });
 
-    requestAnimationFrame(animate);
-}
+        requestAnimationFrame(animate);
+    }
 
 window.addEventListener('resize', () => {
     width = canvas.width = window.innerWidth;
