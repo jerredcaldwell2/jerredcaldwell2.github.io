@@ -104,15 +104,6 @@ main {
     border-radius: 10px;
 }
 
-
-
-
-
-
-
-
-
-
 .floating-box::-webkit-scrollbar {
     display: none;
 }
@@ -410,9 +401,6 @@ h4.centered-text {
     width: 100%;
     text-align: center;
 }
-=======
-  transition: transform 0.3s; {
-}
 
 @media only screen and (max-width: 767px) {
   .container-fluid .mobile-links a {
@@ -460,4 +448,133 @@ select_calc {
 .bright-text {
     color: #FFFFFF; /* Bright white color */  /* Neon blue */
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Subtle shadow for better contrast */
+}
+
+.animation-container {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.anm-content {
+    min-height: calc(100vh - 50px);
+    color: #FFFFFF; /* Bright white color */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    position: relative;
+    overflow: hidden;
+    display: none;  /* Start hidden */
+    opacity: 0;     /* Start fully transparent */
+    transition: opacity 2s ease-in; /* Smooth fade-in over 2 seconds */
+}
+
+.anm-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200px;  /* Twice as big as the original size */
+    height: 200px; /* Twice as big as the original size */
+    transform: translate(-50%, -50%);
+    transform-origin: center center;
+    animation: rotateY 4.5s infinite linear;
+}
+
+.line {
+    position: absolute;
+    height: 2px; /* Thickness of the line */
+    background-color: #00FFFF; /* Light neon blue color */
+    width: 0;
+}
+
+.line1  { top: calc(50% - 190px); left: 0; animation: expand-left-center 3s forwards; }
+.line2  { top: calc(50% - 170px); left: 0; animation: expand-left-center 3s 0.15s forwards; }
+.line3  { top: calc(50% - 150px); left: 0; animation: expand-left-center 3s 0.3s forwards; }
+.line4  { top: calc(50% - 130px); left: 0; animation: expand-left-center 3s 0.45s forwards; }
+.line5  { top: calc(50% - 110px); left: 0; animation: expand-left-center 3s 0.6s forwards; }
+.line6  { top: calc(50% - 90px);  left: 0; animation: expand-left 3s 0.75s forwards; }
+.line7  { top: calc(50% - 70px);  left: 0; animation: expand-left 3s 0.9s forwards; }
+.line8  { top: calc(50% - 50px);  left: 0; animation: expand-left 3s 1.05s forwards; }
+.line9  { top: calc(50% - 30px);  left: 0; animation: expand-left 3s 1.2s forwards; }
+.line10 { top: calc(50% - 10px);  left: 0; animation: expand-left 3s 1.35s forwards; }
+
+.line11 { top: calc(50% - 190px); right: 0; animation: expand-right-center 3s forwards; }
+.line12 { top: calc(50% - 170px); right: 0; animation: expand-right-center 3s 0.15s forwards; }
+.line13 { top: calc(50% - 150px); right: 0; animation: expand-right-center 3s 0.3s forwards; }
+.line14 { top: calc(50% - 130px); right: 0; animation: expand-right-center 3s 0.45s forwards; }
+.line15 { top: calc(50% - 110px); right: 0; animation: expand-right-center 3s 0.6s forwards; }
+.line16 { top: calc(50% - 90px);  right: 0; animation: expand-right 3s 0.75s forwards; }
+.line17 { top: calc(50% - 70px);  right: 0; animation: expand-right 3s 0.9s forwards; }
+.line18 { top: calc(50% - 50px);  right: 0; animation: expand-right 3s 1.05s forwards; }
+.line19 { top: calc(50% - 30px);  right: 0; animation: expand-right 3s 1.2s forwards; }
+.line20 { top: calc(50% - 10px);  right: 0; animation: expand-right 3s 1.35s forwards; }
+
+.line21 { bottom: calc(50% - 10px); left: 0; animation: expand-left 3s 1.35s forwards; }
+.line22 { bottom: calc(50% - 30px); left: 0; animation: expand-left 3s 1.2s forwards; }
+.line23 { bottom: calc(50% - 50px); left: 0; animation: expand-left 3s 1.05s forwards; }
+.line24 { bottom: calc(50% - 70px); left: 0; animation: expand-left 3s 0.9s forwards; }
+.line25 { bottom: calc(50% - 90px); left: 0; animation: expand-left 3s 0.75s forwards; }
+.line26 { bottom: calc(50% - 110px); left: 0; animation: expand-left-center 3s 0.6s forwards; }
+.line27 { bottom: calc(50% - 130px); left: 0; animation: expand-left-center 3s 0.45s forwards; }
+.line28 { bottom: calc(50% - 150px); left: 0; animation: expand-left-center 3s 0.3s forwards; }
+.line29 { bottom: calc(50% - 170px); left: 0; animation: expand-left-center 3s 0.15s forwards; }
+.line30 { bottom: calc(50% - 190px); left: 0; animation: expand-left-center 3s forwards; }
+
+.line31 { bottom: calc(50% - 10px); right: 0; animation: expand-right 3s 1.35s forwards; }
+.line32 { bottom: calc(50% - 30px); right: 0; animation: expand-right 3s 1.2s forwards; }
+.line33 { bottom: calc(50% - 50px); right: 0; animation: expand-right 3s 1.05s forwards; }
+.line34 { bottom: calc(50% - 70px); right: 0; animation: expand-right 3s 0.9s forwards; }
+.line35 { bottom: calc(50% - 90px); right: 0; animation: expand-right 3s 0.75s forwards; }
+.line36 { bottom: calc(50% - 110px); right: 0; animation: expand-right-center 3s 0.6s forwards; }
+.line37 { bottom: calc(50% - 130px); right: 0; animation: expand-right-center 3s 0.45s forwards; }
+.line38 { bottom: calc(50% - 150px); right: 0; animation: expand-right-center 3s 0.3s forwards; }
+.line39 { bottom: calc(50% - 170px); right: 0; animation: expand-right-center 3s 0.15s forwards; }
+.line40 { bottom: calc(50% - 190px); right: 0; animation: expand-right-center 3s forwards; }
+
+@keyframes expand-left {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: calc(50% - 95px); /* Stop at the border of the logo */
+    }
+}
+
+@keyframes expand-left-center {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: calc(50%); /* Stop exactly at the middle */
+    }
+}
+
+@keyframes expand-right {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: calc(50% - 95px); /* Stop at the border of the logo */
+    }
+}
+
+@keyframes expand-right-center {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: calc(50%); /* Stop exactly at the middle */
+    }
+}
+
+
+@keyframes rotateY {
+    0% {
+        transform: translate(-50%, -50%) rotateY(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotateY(360deg);
+    }
 }

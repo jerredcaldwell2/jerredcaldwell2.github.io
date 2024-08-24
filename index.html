@@ -8,63 +8,102 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="master.css" />
 </head>
 
 <body>
 <canvas id="matrixTunnel"></canvas>
-  <!-- Navbar -->
-  <nav class="navbar navbar-inverse nav">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-      </div>
-      <!-- mobile navbar content -->
-      <div class="collapse navbar-collapse navbar-dropdown" id="myNavbar">
-        <ul class="nav navbar-nav">
-          <li class="active"><a href="/index">Home</a></li>
-          <li><a href="/calculator">Calculator</a></li>
-          <li><a href="/career">Career</a></li>
-          <li><a href="/hobbies">Hobbies</a></li>
-          <li><a href="/contact">Contact</a></li>
-          <li><a href="/login">Login</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
 
-  <!-- Content -->
-  <div class="container-fluid floating-box">
-  <div class="content">
-    <img class="logo_inv_1" src="assets/jc_logo_inv.png" alt="Inv Logo">
-    <h1 class="centered-text">Welcome!</h1>
-    <br>
-    <br>
-    <!-- <p class="centered-text">This is my base landing page to direct you to the other cool stuff this site has to offer.</p>
-    <p class="centered-text">This site is under construction and will be going through many development changes and hopefully nothing breaks.</p> -->
-    <p class="centered-text">I'm a resourceful engineer with over 15 years of experience in setting and coordinating project goals. I am eager to join a creative team to develop innovative solutions for the future.<br>I was homeschooled and graduated high school, followed by three years of engineering studies at the Advanced Technology Complex. Early in my career, I gained valuable experience in managing people and being an effective leader.<br>I've been a team player, acquiring skills in construction, problem-solving, computer science, automation, software development, robotics, data engineering, manufacturing, along with extensive design experience.</p>
-    <br>
-    <p class="centered-text">Enjoy exploring my website, and hopefully something can spark your creativity to push to create a better future.</p>
-    <br>
-    <br>
-    <p class="centered-text">&copy; 2024 Jerred Caldwell</p>
-  </div>
-</div>
-  <!-- Footer -->
-  <!--
-  <footer class="footer">
-    <div class="container">
-      <p></p>
-      <p>&copy; 2023 Jerred Caldwell</p>
+<!-- Navbar -->
+<nav class="navbar navbar-inverse nav">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
     </div>
-  </footer>
--->
+    <!-- mobile navbar content -->
+    <div class="collapse navbar-collapse navbar-dropdown" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="/index">Home</a></li>
+        <li><a href="/calculator">Calculator</a></li>
+        <li><a href="/career">Career</a></li>
+        <li><a href="/hobbies">Hobbies</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/login">Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <!-- Floating Box -->
+  <div class="container-fluid floating-box">
+    <!-- Animation Container -->
+    <div class="animation-container">
+      <img src="assets/jc_logo_inv.png" class="anm-logo" alt="Logo">
+      <!-- Lines from the top to middle -->
+      <div class="line line1"></div>
+      <div class="line line2"></div>
+      <div class="line line3"></div>
+      <div class="line line4"></div>
+      <div class="line line5"></div>
+      <div class="line line6"></div>
+      <div class="line line7"></div>
+      <div class="line line8"></div>
+      <div class="line line9"></div>
+      <div class="line line10"></div>
+      <div class="line line11"></div>
+      <div class="line line12"></div>
+      <div class="line line13"></div>
+      <div class="line line14"></div>
+      <div class="line line15"></div>
+      <div class="line line16"></div>
+      <div class="line line17"></div>
+      <div class="line line18"></div>
+      <div class="line line19"></div>
+      <div class="line line20"></div>
+
+      <!-- Lines from the bottom to middle in reverse order -->
+      <div class="line line21"></div>
+      <div class="line line22"></div>
+      <div class="line line23"></div>
+      <div class="line line24"></div>
+      <div class="line line25"></div>
+      <div class="line line26"></div>
+      <div class="line line27"></div>
+      <div class="line line28"></div>
+      <div class="line line29"></div>
+      <div class="line line30"></div>
+      <div class="line line31"></div>
+      <div class="line line32"></div>
+      <div class="line line33"></div>
+      <div class="line line34"></div>
+      <div class="line line35"></div>
+      <div class="line line36"></div>
+      <div class="line line37"></div>
+      <div class="line line38"></div>
+      <div class="line line39"></div>
+      <div class="line line40"></div>
+    </div>
+
+    <!-- Content -->
+    <div class="anm-content">
+      <img class="logo_inv_1" src="assets/jc_logo_inv.png" alt="Inv Logo">
+      <h1 class="centered-text">Welcome!</h1>
+      <br>
+      <p class="centered-text">I'm a resourceful engineer with over 15 years of experience in setting and coordinating project goals. I am eager to join a creative team to develop innovative solutions for the future.<br>I was homeschooled and graduated high school, followed by three years of engineering studies at the Advanced Technology Complex. Early in my career, I gained valuable experience in managing people and being an effective leader.<br>I've been a team player, acquiring skills in construction, problem-solving, computer science, automation, software development, robotics, data engineering, manufacturing, along with extensive design experience.</p>
+      <br>
+      <p class="centered-text">Enjoy exploring my website, and hopefully something can spark your creativity to push to create a better future.</p>
+      <br>
+      <p class="centered-text">&copy; 2024 Jerred Caldwell</p>
+    </div>
+  </div>
+
 <script src="matrix_tunnel.js"></script>
+<script src="start_anm.js"></script>
+
 </body>
 </html>
