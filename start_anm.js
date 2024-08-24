@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
             // Allow scrolling again after the content is fully displayed
             setTimeout(function () {
                 document.body.style.overflow = '';
-            }, 2000); // Delay for the fade-in duration
-        }, 2000); // 2 seconds for the fade-out
-    }, 6500); // 6.5 seconds for the animation
+            }, 1200); // fade-in duration
+        }, 1800); // fade-out duration
+    }, 5750); // 5.75 seconds for the animation
 });
