@@ -16,12 +16,12 @@ document.addEventListener('DOMContentLoaded', function () {
             content.style.display = 'block';  // Make it visible
             setTimeout(function () {
                 content.style.opacity = '1';  // Start the fade-in
-            }, 50);  // Small delay to ensure the transition takes effect
+            }, 25);  // Small delay to ensure the transition takes effect
 
             // Allow scrolling again after the content is fully displayed
             setTimeout(function () {
                 document.body.style.overflow = '';
             }, 1200); // fade-in duration
         }, 1800); // fade-out duration
-    }, 5750); // 5.75 seconds for the animation
+    }, 6000); // 5.75 seconds for the animation
 });
