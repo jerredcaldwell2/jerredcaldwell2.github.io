@@ -102,6 +102,8 @@ main {
     z-index: 3; /* Ensure floating-box is above the canvas */
     overflow-y: auto;
     border-radius: 10px;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;     /* Firefox */
 }
 
 .floating-box::-webkit-scrollbar {
@@ -484,54 +486,54 @@ select_calc {
 
 .line {
     position: absolute;
-    height: 2px; /* Thickness of the line */
-    background-color: #00FFFF; /* Light neon blue color */
+    height: 2px; 
+    background-color: #00FFFF; 
     width: 0;
 }
 
-.line1  { top: calc(50% - 190px); left: 0; animation: expand-left-center 3s forwards; }
-.line2  { top: calc(50% - 170px); left: 0; animation: expand-left-center 3s 0.15s forwards; }
-.line3  { top: calc(50% - 150px); left: 0; animation: expand-left-center 3s 0.3s forwards; }
-.line4  { top: calc(50% - 130px); left: 0; animation: expand-left-center 3s 0.45s forwards; }
-.line5  { top: calc(50% - 110px); left: 0; animation: expand-left-center 3s 0.6s forwards; }
-.line6  { top: calc(50% - 90px);  left: 0; animation: expand-left 3s 0.75s forwards; }
-.line7  { top: calc(50% - 70px);  left: 0; animation: expand-left 3s 0.9s forwards; }
-.line8  { top: calc(50% - 50px);  left: 0; animation: expand-left 3s 1.05s forwards; }
-.line9  { top: calc(50% - 30px);  left: 0; animation: expand-left 3s 1.2s forwards; }
-.line10 { top: calc(50% - 10px);  left: 0; animation: expand-left 3s 1.35s forwards; }
+.line1  { top: calc(50% - 190px); left: 0; animation: expand-left-center 3s 1.5s forwards; }
+.line2  { top: calc(50% - 170px); left: 0; animation: expand-left-center 3s 1.65s forwards; }
+.line3  { top: calc(50% - 150px); left: 0; animation: expand-left-center 3s 1.8s forwards; }
+.line4  { top: calc(50% - 130px); left: 0; animation: expand-left-center 3s 1.95s forwards; }
+.line5  { top: calc(50% - 110px); left: 0; animation: expand-left-center 3s 2.1s forwards; }
+.line6  { top: calc(50% - 90px);  left: 0; animation: expand-left 3s 2.25s forwards; }
+.line7  { top: calc(50% - 70px);  left: 0; animation: expand-left 3s 2.4s forwards; }
+.line8  { top: calc(50% - 50px);  left: 0; animation: expand-left 3s 2.55s forwards; }
+.line9  { top: calc(50% - 30px);  left: 0; animation: expand-left 3s 2.7s forwards; }
+.line10 { top: calc(50% - 10px);  left: 0; animation: expand-left 3s 2.85s forwards; }
 
-.line11 { top: calc(50% - 190px); right: 0; animation: expand-right-center 3s forwards; }
-.line12 { top: calc(50% - 170px); right: 0; animation: expand-right-center 3s 0.15s forwards; }
-.line13 { top: calc(50% - 150px); right: 0; animation: expand-right-center 3s 0.3s forwards; }
-.line14 { top: calc(50% - 130px); right: 0; animation: expand-right-center 3s 0.45s forwards; }
-.line15 { top: calc(50% - 110px); right: 0; animation: expand-right-center 3s 0.6s forwards; }
-.line16 { top: calc(50% - 90px);  right: 0; animation: expand-right 3s 0.75s forwards; }
-.line17 { top: calc(50% - 70px);  right: 0; animation: expand-right 3s 0.9s forwards; }
-.line18 { top: calc(50% - 50px);  right: 0; animation: expand-right 3s 1.05s forwards; }
-.line19 { top: calc(50% - 30px);  right: 0; animation: expand-right 3s 1.2s forwards; }
-.line20 { top: calc(50% - 10px);  right: 0; animation: expand-right 3s 1.35s forwards; }
+.line11 { top: calc(50% - 190px); right: 0; animation: expand-right-center 3s 1.5s forwards; }
+.line12 { top: calc(50% - 170px); right: 0; animation: expand-right-center 3s 1.65s forwards; }
+.line13 { top: calc(50% - 150px); right: 0; animation: expand-right-center 3s 1.8s forwards; }
+.line14 { top: calc(50% - 130px); right: 0; animation: expand-right-center 3s 1.95s forwards; }
+.line15 { top: calc(50% - 110px); right: 0; animation: expand-right-center 3s 2.1s forwards; }
+.line16 { top: calc(50% - 90px);  right: 0; animation: expand-right 3s 2.25s forwards; }
+.line17 { top: calc(50% - 70px);  right: 0; animation: expand-right 3s 2.4s forwards; }
+.line18 { top: calc(50% - 50px);  right: 0; animation: expand-right 3s 2.55s forwards; }
+.line19 { top: calc(50% - 30px);  right: 0; animation: expand-right 3s 2.7s forwards; }
+.line20 { top: calc(50% - 10px);  right: 0; animation: expand-right 3s 2.85s forwards; }
 
-.line21 { bottom: calc(50% - 10px); left: 0; animation: expand-left 3s 1.35s forwards; }
-.line22 { bottom: calc(50% - 30px); left: 0; animation: expand-left 3s 1.2s forwards; }
-.line23 { bottom: calc(50% - 50px); left: 0; animation: expand-left 3s 1.05s forwards; }
-.line24 { bottom: calc(50% - 70px); left: 0; animation: expand-left 3s 0.9s forwards; }
-.line25 { bottom: calc(50% - 90px); left: 0; animation: expand-left 3s 0.75s forwards; }
-.line26 { bottom: calc(50% - 110px); left: 0; animation: expand-left-center 3s 0.6s forwards; }
-.line27 { bottom: calc(50% - 130px); left: 0; animation: expand-left-center 3s 0.45s forwards; }
-.line28 { bottom: calc(50% - 150px); left: 0; animation: expand-left-center 3s 0.3s forwards; }
-.line29 { bottom: calc(50% - 170px); left: 0; animation: expand-left-center 3s 0.15s forwards; }
-.line30 { bottom: calc(50% - 190px); left: 0; animation: expand-left-center 3s forwards; }
+.line21 { bottom: calc(50% - 10px); left: 0; animation: expand-left 3s 2.85s forwards; }
+.line22 { bottom: calc(50% - 30px); left: 0; animation: expand-left 3s 2.7s forwards; }
+.line23 { bottom: calc(50% - 50px); left: 0; animation: expand-left 3s 2.55s forwards; }
+.line24 { bottom: calc(50% - 70px); left: 0; animation: expand-left 3s 2.4s forwards; }
+.line25 { bottom: calc(50% - 90px); left: 0; animation: expand-left 3s 2.25s forwards; }
+.line26 { bottom: calc(50% - 110px); left: 0; animation: expand-left-center 3s 2.1s forwards; }
+.line27 { bottom: calc(50% - 130px); left: 0; animation: expand-left-center 3s 1.95s forwards; }
+.line28 { bottom: calc(50% - 150px); left: 0; animation: expand-left-center 3s 1.8s forwards; }
+.line29 { bottom: calc(50% - 170px); left: 0; animation: expand-left-center 3s 1.65s forwards; }
+.line30 { bottom: calc(50% - 190px); left: 0; animation: expand-left-center 3s 1.5s forwards; }
 
-.line31 { bottom: calc(50% - 10px); right: 0; animation: expand-right 3s 1.35s forwards; }
-.line32 { bottom: calc(50% - 30px); right: 0; animation: expand-right 3s 1.2s forwards; }
-.line33 { bottom: calc(50% - 50px); right: 0; animation: expand-right 3s 1.05s forwards; }
-.line34 { bottom: calc(50% - 70px); right: 0; animation: expand-right 3s 0.9s forwards; }
-.line35 { bottom: calc(50% - 90px); right: 0; animation: expand-right 3s 0.75s forwards; }
-.line36 { bottom: calc(50% - 110px); right: 0; animation: expand-right-center 3s 0.6s forwards; }
-.line37 { bottom: calc(50% - 130px); right: 0; animation: expand-right-center 3s 0.45s forwards; }
-.line38 { bottom: calc(50% - 150px); right: 0; animation: expand-right-center 3s 0.3s forwards; }
-.line39 { bottom: calc(50% - 170px); right: 0; animation: expand-right-center 3s 0.15s forwards; }
-.line40 { bottom: calc(50% - 190px); right: 0; animation: expand-right-center 3s forwards; }
+.line31 { bottom: calc(50% - 10px); right: 0; animation: expand-right 3s 2.85s forwards; }
+.line32 { bottom: calc(50% - 30px); right: 0; animation: expand-right 3s 2.7s forwards; }
+.line33 { bottom: calc(50% - 50px); right: 0; animation: expand-right 3s 2.55s forwards; }
+.line34 { bottom: calc(50% - 70px); right: 0; animation: expand-right 3s 2.4s forwards; }
+.line35 { bottom: calc(50% - 90px); right: 0; animation: expand-right 3s 2.25s forwards; }
+.line36 { bottom: calc(50% - 110px); right: 0; animation: expand-right-center 3s 2.1s forwards; }
+.line37 { bottom: calc(50% - 130px); right: 0; animation: expand-right-center 3s 1.95s forwards; }
+.line38 { bottom: calc(50% - 150px); right: 0; animation: expand-right-center 3s 1.8s forwards; }
+.line39 { bottom: calc(50% - 170px); right: 0; animation: expand-right-center 3s 1.65s forwards; }
+.line40 { bottom: calc(50% - 190px); right: 0; animation: expand-right-center 3s 1.5s forwards; }
 
 @keyframes expand-left {
     0% {
