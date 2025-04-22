@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Franks LAN Party</title>
+  <title>FB</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- Bootstrap & Fonts -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="master.css" />
 
@@ -17,53 +17,168 @@
       height: 100%;
       margin: 0;
       padding: 0;
-      background-color: 0 0 20px rgba(0, 255, 255, 0);
-      font-family: 'Orbitron', sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .iframe-container {
-      width: 50vw;
-      height: 90vh;
-      background-color: white;
-      border-radius: 8px;
-      box-shadow: 0 0 20px rgba(0, 255, 255, 0);
       overflow: hidden;
     }
 
-    iframe {
+    #matrixTunnel {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
       width: 100%;
       height: 100%;
-      border: none;
-      display: block;
     }
 
-    @media (max-width: 768px) {
-      .iframe-container {
-        width: 90vw;
-        height: 90vh;
-      }
+    .floating-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80vw;                 /* responsive width */
+    max-width: 1350px;
+    height: 80vh;                /* responsive height */
+    padding: 20px 15px;
+    background-color: #141414;
+    color: #39ff14;
+    font-family: 'Orbitron', sans-serif;
+    box-shadow: 0 0 20px #0ff0ff;
+    z-index: 3;
+    overflow: visible;
+    border-radius: 10px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+
+
+.wave-text {
+  margin-top: 20px;
+  font-size: clamp(3rem, 8vw, 5rem); /* Bigger base and upper limit */
+  font-weight: bold;
+  line-height: 1.1;
+  text-align: center;
+  word-break: break-word;
+}
+
+
+
+
+
+    .centered-text {
+      text-align: center;
     }
+
+    .logo-img {
+  max-width: 85%;
+  display: block;
+  margin: -320px auto 20px auto; /* default for desktop */
+}
+
+@media (max-width: 768px) {
+  .logo-img {
+    margin-top: -30px; /* more aggressive pull for mobile */
+  }
+}
+
+#intro-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  animation: flickerOut 2s ease-in-out 2s forwards;
+}
+
+@keyframes flickerOut {
+  0%   { opacity: 1;}
+  10%  { opacity: 0.3;}
+  20%  { opacity: 0.8;}
+  30%  { opacity: 0.1;}
+  40%  { opacity: 0.9;}
+  50%  { opacity: 0.2;}
+  60%  { opacity: 0.7;}
+  70%  { opacity: 0.3;}
+  80%  { opacity: 0.8;}
+  90%  { opacity: 0.1;}
+  100% { opacity: 0;}
+}
+
+#main-content {
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .logo-img {
+    margin-top: -120px; /* pull image up for medium screens */
+    max-width: 90%;
+  }
+
+  .wave-text {
+    font-size: clamp(2.5rem, 6vw, 4rem); /* slightly smaller wave-text for tighter view */
+  }
+
+  .floating-box {
+    height: 85vh; /* give slightly more vertical space */
+    padding: 30px 20px;
+  }
+}
+
+
   </style>
 </head>
 
 <body>
-<canvas id="matrixTunnel"></canvas>
+  <canvas id="matrixTunnel"></canvas>
 
-<div class="iframe-container">
-  <iframe 
-    src="https://forms.office.com/r/fekMXAXV1N?embed=true" 
-    allowfullscreen 
-    webkitallowfullscreen 
-    mozallowfullscreen 
-    msallowfullscreen>
-  </iframe>
-</div>
+  <!-- Floating Box -->
+  <div class="container-fluid floating-box">
+    <br><br><br>
+    <div class="content">
+      <div id="intro-slide">
+        <h4 class="centered-text wave-text">FRANK BARTEL<br> PRESENTS</h4>
+        <img src="assets/bo2_logo.png" alt="Logo" class="logo-img">
+      </div>
+      
+      <!-- Hidden initially, fades in after intro -->
+      <div id="main-content">
+        <br>
+        <h4 class="centered-text wave-text">XBOX LAN PARTY</h4>
+        <br>
+        <p class="centered-text">Saturday, May 24th</p>
+      <p class="centered-text">18:30–23:00</p>
+      <p class="centered-text">Frank and Ashlyn's House</p>
+      <p class="centered-text">145 Mount Pleasant Rd, Valley View, TX</p>
+      <br>
+      <h2 class="centered-text">This is your invitation for the party of the year!</h2>
+      <br>
+      <p class="centered-text">
+        <a href="survey.html" style="color: #39ff14; text-decoration: underline;">
+          Please RSVP here!
+        </a>
+      </p>
+      </div>
+    
+    </div>
+  </div>
 
-<script src="matrix_tunnel.js"></script>
-<script src="start_anm.js"></script>
+  <!-- Scripts -->
+  <script src="matrix_tunnel.js"></script>
+  <script>
+    setTimeout(() => {
+      const intro = document.getElementById("intro-slide");
+      const main = document.getElementById("main-content");
+  
+      intro.style.display = "none";
+      main.style.display = "block";
+  
+      setTimeout(() => {
+        main.style.opacity = 1;
+      }, 50); // small delay to trigger fade-in
+    }, 4000); // 2s delay + 2s flicker animation
+  </script>
+  
+  
+  
 
 </body>
 </html>
