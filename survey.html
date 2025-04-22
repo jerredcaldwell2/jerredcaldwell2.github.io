@@ -5,10 +5,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Bootstrap & Fonts -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="master.css" />
 
@@ -17,177 +17,53 @@
       height: 100%;
       margin: 0;
       padding: 0;
+      background-color: 0 0 20px rgba(0, 255, 255, 0);
+      font-family: 'Orbitron', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .iframe-container {
+      width: 50vw;
+      height: 90vh;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0);
       overflow: hidden;
     }
 
-    #matrixTunnel {
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: -1;
+    iframe {
       width: 100%;
       height: 100%;
+      border: none;
+      display: block;
     }
 
-    .floating-box {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 80vw;
-  max-width: 1350px;
-  height: 80vh;
-  padding: 20px 15px;
-  background-color: #141414;
-  color: #39ff14;
-  font-family: 'Orbitron', sans-serif;
-  box-shadow: 0 0 20px #0ff0ff;
-  z-index: 3;
-  overflow: visible;
-  border-radius: 10px;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-
-/* Medium screens (tablets/laptops) */
-@media (max-width: 1024px) {
-  .floating-box {
-    width: 90vw;
-    height: 85vh;
-    padding: 20px;
-  }
-
-  .iframe-container {
-    width: 100%;
-    height: 100%;
-  }
-}
-
-@media (max-width: 768px) {
-  .floating-box {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 85vw;
-    height: 70vh;
-    padding: 20px;
-    background-color: #141414;
-    color: #39ff14;
-    font-family: 'Orbitron', sans-serif;
-    box-shadow: 0 0 20px #0ff0ff;
-    z-index: 3;
-    overflow: visible;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .iframe-container {
-    width: 100%;
-    height: 100%;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 0 20px rgba(0, 255, 255, 0);
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-    display: block;
-  }
-}
-
-
-
-
-    .centered-text {
-      text-align: center;
+    @media (max-width: 768px) {
+      .iframe-container {
+        width: 90vw;
+        height: 90vh;
+      }
     }
-
-#main-content {
-  opacity: 0;
-  transition: opacity 2s ease-in-out;
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
-  .logo-img {
-    margin-top: -120px; /* pull image up for medium screens */
-    max-width: 90%;
-  }
-
-  .wave-text {
-    font-size: clamp(2.5rem, 6vw, 4rem); /* slightly smaller wave-text for tighter view */
-  }
-
-  .floating-box {
-    height: 85vh; /* give slightly more vertical space */
-    padding: 30px 20px;
-  }
-}
-
-.iframe-container {
-  width: 100%;
-  height: 100%;
-  background-color: transparent; /* optional */
-  border-radius: 10px;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0; /* clean edges */
-}
-
-iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
-  display: block;
-}
-
-
-    
-
   </style>
 </head>
 
 <body>
-  <canvas id="matrixTunnel"></canvas>
+<canvas id="matrixTunnel"></canvas>
 
-  <!-- Floating Box -->
-  <div class="container-fluid floating-box">
-    <br><br><br>
-    <div class="iframe-container">
-        <iframe 
-          src="https://forms.office.com/r/fekMXAXV1N?embed=true" 
-          allowfullscreen 
-          webkitallowfullscreen 
-          mozallowfullscreen 
-          msallowfullscreen>
-        </iframe>
-      </div>
-      
-      
-    
-    </div>
-  </div>
+<div class="iframe-container">
+  <iframe 
+    src="https://forms.office.com/r/fekMXAXV1N?embed=true" 
+    allowfullscreen 
+    webkitallowfullscreen 
+    mozallowfullscreen 
+    msallowfullscreen>
+  </iframe>
+</div>
 
-  <!-- Scripts -->
-  <script src="matrix_tunnel.js"></script>
-  
-  
-  
-  
+<script src="matrix_tunnel.js"></script>
+<script src="start_anm.js"></script>
 
 </body>
 </html>
