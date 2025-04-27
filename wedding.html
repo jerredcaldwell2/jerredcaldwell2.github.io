@@ -38,14 +38,15 @@
         max-width: 1350px;
         height: 80vh;
         padding: 20px 15px;
-        background-color: rgba(173, 216, 230, 0.8); /* Light transparent blue */
-        color: #141414; /* Change text to dark for contrast */
+        background-color: rgba(173, 216, 230, 0.8);
+        color: #141414;
         font-family: 'Orbitron', sans-serif;
         box-shadow: 0 0 20px #0ff0ff;
         z-index: 3;
-        overflow: visible;
+        overflow-y: auto; /* <-- ADD THIS for vertical scrolling */
+        overflow-x: hidden; /* <-- Hide horizontal overflow */
         border-radius: 10px;
-      }
+      }      
       
 
     .wave-text {
