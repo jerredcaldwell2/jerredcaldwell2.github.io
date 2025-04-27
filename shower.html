@@ -68,11 +68,33 @@
       margin: -320px auto 20px auto;
     }
 
-    @media (max-width: 768px) {
-      .logo-img {
-        margin-top: -30px;
+    @media (min-width: 769px) {
+        .logo-img {
+          margin-top: -120px;
+          max-width: 90%;
+        }
+      
+        .wave-text {
+          font-size: clamp(2.5rem, 6vw, 4rem);
+          margin-bottom: 40px; /* give more breathing room below the title */
+        }
+      
+        .floating-box {
+          height: 85vh;
+          padding: 40px 30px; /* slightly more padding */
+        }
+      
+        .centered-text {
+          margin-bottom: 20px; /* add spacing between each paragraph */
+          line-height: 1.5; /* make lines taller and easier to read */
+        }
+      
+        #main-content a {
+          margin-top: 20px;
+          display: inline-block;
+        }
       }
-    }
+      
 
     @media (min-width: 769px) and (max-width: 1024px) {
       .logo-img {
