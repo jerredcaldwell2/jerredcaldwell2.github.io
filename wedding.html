@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Caldwell Wedding</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap & Fonts -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="master.css" />
+
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    #matrixTunnel {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+    }
+
+    .floating-box {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80vw;
+        max-width: 1350px;
+        height: 80vh;
+        padding: 20px 15px;
+        background-color: rgba(173, 216, 230, 0.8); /* Light transparent blue */
+        color: #141414; /* Change text to dark for contrast */
+        font-family: 'Orbitron', sans-serif;
+        box-shadow: 0 0 20px #0ff0ff;
+        z-index: 3;
+        overflow: visible;
+        border-radius: 10px;
+      }
+      
+
+    .wave-text {
+      margin-top: 20px;
+      font-size: clamp(3rem, 8vw, 5rem);
+      font-weight: bold;
+      line-height: 1.1;
+      text-align: center;
+      word-break: break-word;
+    }
+
+    .centered-text {
+      text-align: center;
+    }
+
+    .logo-img {
+      max-width: 85%;
+      display: block;
+      margin: -320px auto 20px auto;
+    }
+
+    @media (max-width: 768px) {
+      .logo-img {
+        margin-top: -30px;
+      }
+    }
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+      .logo-img {
+        margin-top: -120px;
+        max-width: 90%;
+      }
+
+      .wave-text {
+        font-size: clamp(2.5rem, 6vw, 4rem);
+      }
+
+      .floating-box {
+        height: 85vh;
+        padding: 30px 20px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+  <canvas id="matrixTunnel"></canvas>
+
+  <!-- Floating Box -->
+  <div class="container-fluid floating-box">
+    <br><br><br>
+    <div class="content">
+      <!-- Main Content Shown Immediately -->
+      <div id="main-content" style="opacity: 1;">
+        <br>
+        <h4 class="centered-text wave-text">The Caldwell's<br>Wedding</h4>
+        <br>
+        <p class="centered-text">Saturday, July 12th</p>
+        <p class="centered-text">4:00pm–8:00pm</p>
+        <p class="centered-text">Hollow Hill</p>
+        <p class="centered-text">1680 Mary Dr, Weatherford, TX, 76085</p>
+        <br>
+        <p class="centered-text">We are keeping this a close family gathering — please only bring invited family members</p>
+        <p class="centered-text">Reception with barbeque will be after ceremony.</p>
+        <br>
+        <p class="centered-text">
+        <a href="https://www.theknot.com/jerredandjayla" style="color: #39ff14; text-decoration: underline;">
+            Please support us here!
+          </a>
+        </p>
+        <h2 class="centered-text">This is your invitation for the party of the year!</h2>
+        <br>
+        <p class="centered-text">
+          <a href="wedding_rsvp.html" style="color: #39ff14; text-decoration: underline;">
+            Please RSVP by June 12th here!
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="firefly_background.js"></script>
+
+
+</body>
+</html>
