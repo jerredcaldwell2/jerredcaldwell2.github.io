@@ -15,19 +15,20 @@ resizeCanvas();
 class Particle {
   constructor() {
     this.reset();
-    this.color = Math.random() < 0.5 ? 'rgba(0, 120, 255,' : 'rgba(255, 120, 0,'; // Blue or Orange
+    this.color = Math.random() < 0.5 ? 'rgba(128, 0, 0,' : 'rgba(0, 0, 128,'; // Blue or Orange
   }
 
   reset() {
     this.x = Math.random() * canvas.width;
     this.y = Math.random() * canvas.height;
-    this.size = Math.random() * 2 + 1;
+    this.size = (Math.random() * 2 + 1) * 3; // Increased size
     this.opacity = 0;
     this.opacityChange = (Math.random() * 0.01) + 0.005;
     this.speedX = Math.random() * 0.5 - 0.25;
     this.speedY = Math.random() * 0.5 - 0.25;
     this.fadingIn = true;
   }
+  
 
   update() {
     this.x += this.speedX;
@@ -63,7 +64,7 @@ class Particle {
 }
 
 // Initialize Particles
-for (let i = 0; i < 500; i++) {  // 250 particles now
+for (let i = 0; i < 350; i++) {  // 300 particles now
   particles.push(new Particle());
 }
 
