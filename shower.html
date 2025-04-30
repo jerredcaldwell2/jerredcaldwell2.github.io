@@ -20,43 +20,41 @@
       overflow: hidden;
     }
 
-    #matrixTunnel {
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: -1;
-      width: 100%;
-      height: 100%;
-    }
+   
 
     .floating-box {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 80vw;
-        max-width: 1350px;
-        height: 80vh;
-        padding: 20px 15px;
-        background-color: rgba(173, 216, 230, 0.8);
-        color: #141414;
-        font-family: 'Orbitron', sans-serif;
-        box-shadow: 0 0 20px #0ff0ff;
-        z-index: 3;
-        overflow-y: auto; /* <-- ADD THIS for vertical scrolling */
-        overflow-x: hidden; /* <-- Hide horizontal overflow */
-        border-radius: 10px;
-      }
-
-
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vw;
+  max-width: 1350px;
+  height: 80vh;
+  padding: 20px 15px;
+  background-color: rgba(0, 0, 64, 0.7); /* Dark navy blue, 70% opacity */
+  color: #141414;
+  font-family: 'Orbitron', sans-serif;
+  box-shadow: 0 0 30px rgba(0, 0, 64, 1);
+  z-index: 3;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border-radius: 10px;
+}
 
 .wave-text {
   margin-top: 20px;
-  font-size: clamp(3rem, 8vw, 5rem); /* Bigger base and upper limit */
-  font-weight: bold;
-  line-height: 1.1;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(4rem, 9vw, 6rem); /* Increased base and max size */
+  font-weight: 500;
+  line-height: 1.2; /* Slightly taller lines */
   text-align: center;
   word-break: break-word;
+  letter-spacing: 0.05em;
+  color:  #FFD700; /* True black */
+}
+
+h4.centered-text.wave-text {
+  color:  #FFD700;
 }
 
     .centered-text {
@@ -74,10 +72,6 @@
     margin-top: -30px; /* more aggressive pull for mobile */
   }
 }
-
-
-
-
 
 #main-content {
   opacity: 0;
@@ -102,33 +96,33 @@
 
 @media (min-width: 769px) {
       
-        .wave-text {
-          margin-top: 30px;
-          font-size: clamp(3rem, 8vw, 5rem);
-          margin-bottom: 30px; /* give more breathing room below the title */
-        }
-      
-        .floating-box {
-          height: 85vh;
-          padding: 90px 30px; /* slightly more padding */
-        }
-      
-        .centered-text {
-          margin-bottom: 20px; /* add spacing between each paragraph */
-          line-height: 1.25; /* make lines taller and easier to read */
-        }
-
-        h3.centered-text {
-            font-size: 2rem;
-            margin-top: 40px;
-            margin-bottom: 20px;
-          }
-      
-        #main-content a {
-          margin-top: 20px;
-          display: inline-block;
-        }
+      .wave-text {
+        margin-top: 25px;
+        font-size: clamp(3.5rem, 9vw, 5.5rem);
+        
       }
+    
+      .floating-box {
+        height: 85vh;
+        padding: 60px 30px; /* slightly more padding */
+      }
+    
+      .centered-text {
+        margin-bottom: 15px; /* add spacing between each paragraph */
+        line-height: 1.25; /* make lines taller and easier to read */
+      }
+
+      h3.centered-text {
+          font-size: 2rem;
+          margin-top: 20px;
+          margin-bottom: 20px;
+        }
+    
+      #main-content a {
+        margin-top: 10px;
+        display: inline-block;
+      }
+    }
 
 
   </style>
@@ -147,20 +141,20 @@
         <h4 class="centered-text wave-text">Jayla's<br>Bridal Shower</h4>
         <br>
         <p class="centered-text">Saturday, June 7th</p>
-        <p class="centered-text">1:00pm–3:00pm</p>
+        <p class="centered-text">Starts at 1:00pm</p>
         <p class="centered-text">Wahlquist House</p>
         <p class="centered-text">5571 Park Haven, Fort Worth, TX 76137
         <br>
          <h3 class="centered-text">This is your invitation for the party of the year!</h3>
         <p class="centered-text">
-        <a href="https://www.theknot.com/jerredandjayla" style="color: #39ff14; text-decoration: underline;">
+        <a href="https://www.theknot.com/jerredandjayla" style="color: #FFD700; text-decoration: underline;">
             Please support us here!
           </a>
         </p>
        
         <br>
         <p class="centered-text">
-          <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAMAAJeZZBFURVNDREo5RTdLTkZCNEZCNDlHVjJVTkxOSC4u" style="color: #39ff14; text-decoration: underline;">
+          <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAMAAJeZZBFURVNDREo5RTdLTkZCNEZCNDlHVjJVTkxOSC4u" style="color: #FFD700; text-decoration: underline;">
             Please RSVP by May 24th here!
           </a>
         </p>
