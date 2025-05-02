@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>30</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap & Fonts -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="master.css" />
+
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    #matrixTunnel {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+    }
+
+    .floating-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80vw;                 /* responsive width */
+    max-width: 1350px;
+    height: 80vh;                /* responsive height */
+    padding: 20px 15px;
+    background-color: #141414;
+    color: #39ff14;
+    font-family: 'Orbitron', sans-serif;
+    box-shadow: 0 0 20px #0ff0ff;
+    z-index: 3;
+    overflow: visible;
+    border-radius: 10px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+
+
+.wave-text {
+  margin-top: 20px;
+  font-size: clamp(3rem, 8vw, 5rem); /* Bigger base and upper limit */
+  font-weight: bold;
+  line-height: 1.1;
+  text-align: center;
+  word-break: break-word;
+}
+
+
+
+
+
+    .centered-text {
+      text-align: center;
+    }
+
+    .logo-img {
+        display: block;
+        max-width: 85%;
+        max-height: 70vh;
+        height: auto;
+        margin: -100px auto 10px auto;
+      }
+      
+      @media (max-width: 1024px) {
+        .logo-img {
+          max-width: 70%;
+          max-height: 40vh;
+          margin-top: -60px;
+        }
+      }
+      
+      @media (max-width: 768px) {
+        .logo-img {
+          max-width: 85%;
+          max-height: 40vh;
+          margin-top: -40px;
+        }
+      }
+      
+      @media (max-width: 480px) {
+        .logo-img {
+          max-width: 90%;
+          max-height: 45vh;
+          margin-top: -30px;
+        }
+      }
+      
+      
+      
+      
+
+#intro-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  animation: flickerOut 2s ease-in-out 4s forwards;
+}
+
+@keyframes flickerOut {
+  0%   { opacity: 1;}
+  10%  { opacity: 0.3;}
+  20%  { opacity: 1;}
+  30%  { opacity: 0.1;}
+  40%  { opacity: 1;}
+  50%  { opacity: 0.2;}
+  60%  { opacity: 1;}
+  70%  { opacity: 0;}
+  80%  { opacity: 1;}
+  90%  { opacity: 0.2;}
+  100% { opacity: 0;}
+}
+
+#main-content {
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+        
+      
+
+  .wave-text {
+    font-size: clamp(2.5rem, 6vw, 4rem); /* slightly smaller wave-text for tighter view */
+  }
+
+  .floating-box {
+    height: 85vh; /* give slightly more vertical space */
+    padding: 30px 20px;
+  }
+}
+
+
+  </style>
+</head>
+
+<body>
+  <canvas id="matrixTunnel"></canvas>
+
+  <!-- Floating Box -->
+  <div class="container-fluid floating-box">
+    <br><br><br>
+    <div class="content">
+      <div id="intro-slide">
+        <h4 class="centered-text wave-text">Jerred Caldwell<br> PRESENTS</h4>
+        <img src="assets/royal_flush.png" alt="Logo" class="logo-img">
+      </div>
+      
+      <!-- Hidden initially, fades in after intro -->
+      <div id="main-content">
+        <br>
+        <h4 class="centered-text wave-text">Jerred's<br>30th Birthday and Bachelor Party</h4>
+        <br>
+        <p class="centered-text">Saturday, July 5th</p>
+      <p class="centered-text">Starts at 19:30</p>
+      <p class="centered-text">Jerred's Apartment</p>
+      <p class="centered-text">Fort Worth, TX</p>
+      <br>
+      <h2 class="centered-text">This is your invitation for the party of the year!</h2>
+      <br>
+      <p class="centered-text">
+        <a href="survey.html" style="color: #39ff14; text-decoration: underline;">
+          Please RSVP here!
+        </a>
+      </p>
+      </div>
+    
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="matrix_tunnel.js"></script>
+  <script>
+    setTimeout(() => {
+      const intro = document.getElementById("intro-slide");
+      const main = document.getElementById("main-content");
+  
+      intro.style.display = "none";
+      main.style.display = "block";
+  
+      setTimeout(() => {
+        main.style.opacity = 1;
+      }, 50); // small delay to trigger fade-in
+    }, 7000); // 2s delay + 2s flicker animation
+  </script>
+  
+  
+  
+
+</body>
+</html>
