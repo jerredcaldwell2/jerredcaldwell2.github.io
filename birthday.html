@@ -56,13 +56,30 @@
       color: #39ff14;
     }
 
-    h4.centered-text.wave-text {
-        color:  #39ff14;
-      }
+    .wave-animated span {
+      display: inline-block;
+      color: #39ff14;
+      animation: wave 1.5s infinite ease-in-out;
+    }
+
+    .wave-animated span:nth-child(odd) {
+      animation-delay: 0.1s;
+    }
+
+    .wave-animated span:nth-child(even) {
+      animation-delay: 0.3s;
+    }
+
+    @keyframes wave {
+      0%, 100% { transform: translateY(0); }
+      25% { transform: translateY(-5px); }
+      50% { transform: translateY(0); }
+      75% { transform: translateY(5px); }
+    }
 
     .centered-text {
       text-align: center;
-      color:rgb(255, 255, 255);
+      color: rgb(255, 255, 255);
     }
 
     .logo-img {
@@ -167,7 +184,7 @@
     <div class="content">
       <div id="intro-wrapper">
         <div id="intro-slide">
-          <h4 class="centered-text wave-text">JERRED<br>PRESENTS</h4>
+            <h4 class="centered-text wave-text" style="color: #39ff14;">JERRED<br>PRESENTS</h4>
           <img src="assets/royal_flush.png" alt="Logo" class="logo-img">
         </div>
         <div class="pixel-overlay" id="pixel-overlay"></div>
@@ -175,7 +192,12 @@
 
       <div id="main-content">
         <br>
-        <h4 class="centered-text wave-text">Jerred's<br>30th Birthday<br>and<br>Bachelor Party</h4>
+        <h4 class="centered-text wave-text wave-animated">
+          <span>J</span><span>e</span><span>r</span><span>r</span><span>e</span><span>d</span><span>'</span><span>s</span><br>
+          <span>3</span><span>0</span><span>t</span><span>h</span> <span>B</span><span>i</span><span>r</span><span>t</span><span>h</span><span>d</span><span>a</span><span>y</span><br>
+          <span>a</span><span>n</span><span>d</span><br>
+          <span>B</span><span>a</span><span>c</span><span>h</span><span>e</span><span>l</span><span>o</span><span>r</span> <span>P</span><span>a</span><span>r</span><span>t</span><span>y</span>
+        </h4>
         <br>
         <p class="centered-text">Saturday, July 5th</p>
         <p class="centered-text">Starts at 19:30</p>
@@ -200,14 +222,12 @@
     const rows = 20;
     const cols = 40;
 
-    // Build pixel grid
     for (let i = 0; i < rows * cols; i++) {
       const pixel = document.createElement('div');
       pixel.classList.add('pixel');
       overlay.appendChild(pixel);
     }
 
-    // After 3 seconds, start pixel animation
     setTimeout(() => {
       const pixels = document.querySelectorAll('.pixel');
       pixels.forEach(pixel => {
@@ -216,22 +236,19 @@
         pixel.classList.add('fizzle');
       });
 
-      // Also fade out the intro slide itself
       introSlide.classList.add('fade-out');
 
-      // Fade out the pixel overlay after pixel animation
       setTimeout(() => {
         overlay.classList.add('fade-out');
-      }, 1000); // start fading overlay a bit after pixels begin
+      }, 1000);
 
-      // Then switch to main content
       setTimeout(() => {
-        document.getElementById('intro-slide').style.display = 'none';
+        introSlide.style.display = 'none';
         document.getElementById('main-content').style.display = 'block';
         setTimeout(() => {
           document.getElementById('main-content').style.opacity = 1;
         }, 50);
-      }, 1500); // allow all fades to finish
+      }, 1500);
     }, 3000);
   </script>
 </body>
